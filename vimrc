@@ -1,8 +1,3 @@
-" Runtime path manipulation
-" execute pathogen#infect()
-
-" This is just temp. 
-
 set nocompatible
 syntax on
 filetype plugin indent on
@@ -28,6 +23,7 @@ set incsearch				" works to highlight search text
 
 " Set abbreviations for commonly misspelled words 
 ab teh the
+ab adn and 
 
 " Intuitive mappings
 nmap ; : 
