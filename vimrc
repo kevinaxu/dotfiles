@@ -73,8 +73,6 @@ nnoremap <F7> :update<CR>:call Make()<CR>
 " Toggle spell check. 
 nmap <silent> <leader>s :set spell!<CR>
 
-" Carat symbol UPPERCASE line
-
 " Map BufExplorer to F3
 imap <F3> ii:BufExplorer<CR>
 map <F3> :BufExplorer<CR>
