@@ -8,6 +8,11 @@ ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="robbyrussell"
 
+# Adjust path for java 
+# JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
+export JAVA_HOME=$(/usr/libexec/java_home) 
+# PATH=${PATH}:${JAVA_HOME}/bin
+
 # Aliases
 # alias v="vim"
 # alias ebsh='vim ~/.bashrc'
@@ -18,6 +23,8 @@ alias rm="rm -i"	# Prompt interactive mode when using rm command.
 alias pt="sudo powertop"
 alias etlp="sudo vim /etc/default/tlp"
 alias rmdir="rm -rfi"
+
+alias preview="open -a preview"
 
 # because typing 'cd' is A LOT of work!!
 alias ..='cd ../'
