@@ -28,6 +28,7 @@ ab adn and
 " Intuitive mappings
 nmap ; : 
 inoremap ii <Esc> 
+inoremap II <Esc>	
 
 " Change the leader to comma
 let mapleader= ","
@@ -72,6 +73,8 @@ nnoremap <F7> :update<CR>:call Make()<CR>
 
 " Toggle spell check. 
 nmap <silent> <leader>s :set spell!<CR>
+highlight clear SpellBad
+highlight SpellBad cterm=underline
 
 " Map BufExplorer to F3
 imap <F3> ii:BufExplorer<CR>

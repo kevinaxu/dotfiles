@@ -7,6 +7,11 @@ ZSH=$HOME/.oh-my-zsh
 #	theme each time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+# Adjust path for java 
+# JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
+export JAVA_HOME=$(/usr/libexec/java_home) 
+# PATH=${PATH}:${JAVA_HOME}/bin
+
 # Aliases
 alias l="ls -lFh"
 alias evim='vim ~/.vimrc'
@@ -25,6 +30,8 @@ alias apache="sudo apachectl"
 
 # AVESTA 
 alias avesta="php /Users/kevinxu/Dev/avesta/batch/avesta.php"
+
+alias preview="open -a preview"
 
 # because typing 'cd' is A LOT of work!!
 alias ..='cd ../'
