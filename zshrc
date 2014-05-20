@@ -3,14 +3,11 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
+# Optionally, if you set this to "random", it'll load a random 
+#	theme each time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
 # Aliases
-# alias v="vim"
-# alias ebsh='vim ~/.bashrc'
 alias l="ls -lFh"
 alias evim='vim ~/.vimrc'
 alias ezsh='vim ~/.zshrc'
@@ -18,6 +15,16 @@ alias rm="rm -i"	# Prompt interactive mode when using rm command.
 alias pt="sudo powertop"
 alias etlp="sudo vim /etc/default/tlp"
 alias rmdir="rm -rfi"
+alias svim="sudo vim"
+
+# APACHE
+alias apache="sudo apachectl"
+
+# COMPOSER 
+# alias composer="php /usr/bin/composer.phar"
+
+# AVESTA 
+alias avesta="php /Users/kevinxu/Dev/avesta/batch/avesta.php"
 
 # because typing 'cd' is A LOT of work!!
 alias ..='cd ../'
@@ -33,6 +40,33 @@ alias sshx="ssh -X kax2@node.zoo.cs.yale.edu"
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+#
+# jump: 
+#	[jump] - jump to a mark 
+#	[mark] - create a mark
+#	[unmark] - delete a mark 
+#	[marks] - list all marks 
+#
+# sublime: 
+#	[st] - Opens a specified file in sublime 
+#	[stt] - Opens current directory in sublime 
+#
+# sudo: 
+#	[esc] twice: Puts [sudo] in front of current command, or the last one if 
+#		command line is empty 
+# 
+plugins=(jump sudo sublime)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+export PATH=/usr/local/sbin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/Cellar/mysql/5.6.17_1/bin:$PATH
 
 # Change editor mode to vim 
 # set -o vi
@@ -68,16 +102,6 @@ HISTFILE=~/.zsh_history
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git jump)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -100,7 +124,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # prompt adam1
 
 # setopt histignorealldups sharehistory
-
 
 # Use modern completion system
 # autoload -Uz compinit
