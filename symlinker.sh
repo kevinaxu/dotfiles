@@ -1,12 +1,15 @@
 #!/bin/bash
-##########################################################
-#	Script that creates symlinks from home directory to any 
-#	dotfiles in ~/dotfiles
-##########################################################
+# Script that creates symlinks from home directory to any 
+# dotfiles in ~/dotfiles
+#
+# Edit history: 
+# 
+# 5/20 - Deleted bashrc from [files]. 
+# 
 
 dir=~/dotfiles
 olddir=~/dotfiles_old 
-files="bashrc vimrc zshrc"
+files="vimrc zshrc"
 
 # Create dotfiles_old in home directory
 echo "Creating $olddir for backup of existing dotfiles in ~"
