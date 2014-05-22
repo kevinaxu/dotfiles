@@ -11,8 +11,8 @@ Usage
 
 You may have to first change permission of symlinker.sh before installing. 
 
-'''bash
+``` bash
 git clone git://github.com/kevinaxu/dotfiles ~/dotfiles
 cd ~/dotfiles
 ./symlinker.sh 
-'''
+```
