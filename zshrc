@@ -25,9 +25,6 @@ alias svim="sudo vim"
 # APACHE
 alias apache="sudo apachectl"
 
-# COMPOSER 
-# alias composer="php /usr/bin/composer.phar"
-
 # AVESTA 
 alias avesta="php /Users/kevinxu/Dev/avesta/batch/avesta.php"
 
