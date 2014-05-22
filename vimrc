@@ -2,6 +2,15 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
+" Set up runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'			" Vundle manages vundle, required. 
+Plugin 'scrooloose/nerdcommenter'	" Plugin ifrom GitHub repo 
+
+call vundle#end()					" End of Vundle plugin 
+
 color elflord				" set the colorscheme (ron, murphy, slate, torte) 
 set nocompatible            " dump old fashioned vi support!
 set modelines=0				" prevents some security exploits..?
