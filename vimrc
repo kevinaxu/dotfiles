@@ -9,8 +9,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'			" Vundle manages vundle, required. 
 Plugin 'scrooloose/nerdcommenter'			" Nerdcommenter 
 Plugin 'scrooloose/nerdtree'				" Nerdtree 
-" Plugin 'altercation/vim-colors-solarized'	" Solarized (doesn't really work) 
 Plugin 'flazz/vim-colorschemes'				" Various vim-colorschemes 
+Plugin 'tpope/vim-unimpaired'				" Pairs of handy bracket mappings 
 
 call vundle#end()					" End of Vundle plugin 
 
