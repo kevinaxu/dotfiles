@@ -6,11 +6,13 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'			" Vundle manages vundle, required. 
+Plugin 'gmarik/Vundle.vim'					" Vundle manages vundle, required. 
 Plugin 'scrooloose/nerdcommenter'			" Nerdcommenter 
 Plugin 'scrooloose/nerdtree'				" Nerdtree 
 Plugin 'flazz/vim-colorschemes'				" Various vim-colorschemes 
 Plugin 'tpope/vim-unimpaired'				" Pairs of handy bracket mappings 
+Plugin 'fholgado/minibufexpl.vim'			" Mini Buffer explorer 
+Plugin 'rbgrouleff/bclose.vim'				" Change bd function 
 
 call vundle#end()					" End of Vundle plugin 
 
@@ -36,14 +38,12 @@ set incsearch				" works to highlight search text
 let g:molokai_original=1 
 color molokai
 
-" set cursorline
-
 " Set abbreviations for commonly misspelled words 
-ab teh the
-ab adn and 
+iabbrev teh the
+iabbrev adn and 
 
 " Intuitive mappings
-nmap ; : 
+nnoremap ; : 
 inoremap ii <Esc> 
 inoremap II <Esc>	
 
@@ -51,16 +51,19 @@ inoremap II <Esc>
 let mapleader= ","
 let g:mapleader = ","
 
-" Quicly edit/reload vimrc and zshrc file
-nmap <silent> <leader>evim :e ~/.vimrc<CR>
-nmap <silent> <leader>ezsh :e ~/.zshrc<CR>
-
 " j and k move up and down display lines vs. real lines 
 nnoremap j gj
 nnoremap k gk
 
+
 " Open a new vertical split and switch to it. 
-nnoremap <leader>w <C-w>v<C-w>l
+" nnoremap <leader>w <C-w>v<C-w>l
+
+" Quickly edit/refresh vimrc and zshrc files
+" nnoremap <leader>evim :e ~/.vimrc<CR>
+" nnoremap <leader>ezsh :e ~/.zshrc<CR>
+" nnoremap <leader>sv :source ~/.vimrc<CR>
+
 
 " Easier split navigation
 nnoremap <C-j> <C-W><C-J>
@@ -68,22 +71,19 @@ nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-h> <C-W><C-H>
 
-" Easier buffer navigation 
-noremap <leader>f :bn<CR>
-noremap <leader>a :bp<CR>
-
 " Redraws screen and removes search highlighting
 " nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Toggle spell check. 
-nmap <silent> <leader>s :set spell!<CR>
+nmap <silent> <leader>sp :set spell!<CR>
 highlight clear SpellBad
 highlight SpellBad cterm=underline
 
 " Highlight background for text > 80 columns
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
+"***************** PLUGIN CONFIG *********************************
 " NERDTREE 
 " Open NERDTree automatically on Vim startup if no files specified 
 autocmd vimenter * if !argc() | NERDTree | endif		
@@ -91,15 +91,12 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif 
 map <C-n> :NERDTreeToggle<CR>
 
-" Map NERDTree to F4
-" imap <F4> ii:NERDTreeToggle<CR>
-" map <F4> :NERDTreeToggle<CR>
-" imap <leader>n ii:NERDTreeToggle<CR>
-" map <leader>n :NERDTreeToggle<CR>
+" Mini Buf Explorer
+map <Leader>mbe :MBEToggle<cr> 
 
-" Map BufExplorer to F3
-" imap <F3> ii:BufExplorer<CR>
-" map <F3> :BufExplorer<CR>
+" Bclose.vim 
+" Use fancy buffer closing that doesn't close the split
+cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
 
 " This is to pretty F7 to invoke Make
 "function! Make() 
