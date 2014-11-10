@@ -21,6 +21,7 @@ alias pt="sudo powertop"
 alias etlp="sudo vim /etc/default/tlp"
 alias rmdir="rm -rfi"
 alias svim="sudo vim"
+alias clera="clear" 
 
 # APACHE
 alias apache="sudo apachectl"
@@ -71,6 +72,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/Cellar/mysql/5.6.17_1/bin:$PATH
+
+# Add composer link to path so 'laravel' command works 
+export PATH=~/.composer/vendor/bin:$PATH
 
 # Change editor mode to vim 
 # set -o vi

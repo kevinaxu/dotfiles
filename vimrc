@@ -27,11 +27,14 @@ set number					" line numbers
 set showmode				" show what mode you're in
 set softtabstop=4			" soft tabs = 2 spaces
 set shiftwidth=4
+set mouse=a					" Enable use of mouse in console vim 
 set tabstop=4				" tabs = 2 spaces
 set hlsearch				" highlight search terms
 set ignorecase				" case insensitive search
 set showmatch				" show matching parentheses
 set incsearch				" works to highlight search text
+set nowrap					" Don't auto wrap text when vim starts
+
 " set background=dark
 " let g:solarized_termcolors=256
 " color solarized				" set the colorscheme (ron, murphy, slate, torte, elflord)
