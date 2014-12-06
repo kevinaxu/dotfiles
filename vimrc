@@ -25,10 +25,13 @@ set showcmd					" display incomplete commands
 set autoindent				" auto indent
 set number					" line numbers	
 set showmode				" show what mode you're in
+set mouse=a					" Enable use of mouse in console vim 
+
+" tabs and spaces 
+set tabstop=4				" tabs = 4 spaces 
 set softtabstop=4			" soft tabs = 2 spaces
 set shiftwidth=4
-set mouse=a					" Enable use of mouse in console vim 
-set tabstop=4				" tabs = 2 spaces
+
 set hlsearch				" highlight search terms
 set ignorecase				" case insensitive search
 set showmatch				" show matching parentheses
@@ -58,6 +61,8 @@ let g:mapleader = ","
 nnoremap j gj
 nnoremap k gk
 
+" Change the characters displayed after using 'set list' 
+set listchars=tab:▸\ ,eol:¬
 
 " Open a new vertical split and switch to it. 
 " nnoremap <leader>w <C-w>v<C-w>l
