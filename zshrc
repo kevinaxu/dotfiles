@@ -23,6 +23,9 @@ alias rmdir="rm -rfi"
 alias svim="sudo vim"
 alias clera="clear" 
 
+# Failed DNS resolution 
+alias dns="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist; sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd_helper.plist; sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd_helper.plist; sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist; sudo discoveryutil mdnsflushcache; sudo launchctl unload /Library/LaunchDaemons/dns_appender.plist; sudo launchctl load -w /Library/LaunchDaemons/dns_appender.plist"
+
 # APACHE
 alias apache="sudo apachectl"
 

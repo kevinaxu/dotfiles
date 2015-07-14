@@ -3,13 +3,16 @@ syntax on
 filetype plugin indent on
 
 " Set up runtime path to include Vundle and initialize
+" Make sure you install vundle plugins by running :PluginInstall
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'					" Vundle manages vundle, required. 
 Plugin 'scrooloose/nerdcommenter'			" Nerdcommenter 
 Plugin 'scrooloose/nerdtree'				" Nerdtree 
-Plugin 'flazz/vim-colorschemes'				" Various vim-colorschemes 
+Plugin 'absertsch/Menlo-for-Powerline'		" Menlo font 
+" Plugin 'flazz/vim-colorschemes'				" Various vim-colorschemes 
+Plugin 'altercation/vim-colors-solarized'	" Solarized colorscheme for vim 
 Plugin 'tpope/vim-unimpaired'				" Pairs of handy bracket mappings 
 Plugin 'fholgado/minibufexpl.vim'			" Mini Buffer explorer 
 Plugin 'rbgrouleff/bclose.vim'				" Change bd function 
@@ -38,11 +41,11 @@ set showmatch				" show matching parentheses
 set incsearch				" works to highlight search text
 set nowrap					" Don't auto wrap text when vim starts
 
-" set background=dark
-" let g:solarized_termcolors=256
 " color solarized				" set the colorscheme (ron, murphy, slate, torte, elflord)
-let g:molokai_original=1 
-color molokai
+" Set the font as Menlo 16 in the preferences 
+set background=dark 
+let g:solarized_termcolors=256
+colorscheme solarized 
 
 " Set abbreviations for commonly misspelled words 
 iabbrev teh the
