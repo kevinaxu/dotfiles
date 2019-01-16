@@ -7,6 +7,7 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+
 Plugin 'VundleVim/Vundle.vim'				" Vundle manages vundle, required. 
 Plugin 'scrooloose/nerdcommenter'			" Nerdcommenter 
 Plugin 'tpope/vim-fugitive'				    " Git wrapper for vim 
